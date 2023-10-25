@@ -8,7 +8,7 @@ import Resultados from './screens/Resultados'
 import NotFound from './screens/NotFound'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Search from './components/Search'
+import SearchBar from './components/SearchBar'
 import Tendencias from './screens/Tendencias'
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
 
       <Navbar/>
-      <Search/>
+      <SearchBar/>
       <Routes>
          <Route path='/' element={<Home/>}/>
         <Route path='/categorias/:idCategoria' element={<Categorias/>}/>

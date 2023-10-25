@@ -1,10 +1,4 @@
-function Resultados(){
-    return <div>Resultados</div>
-   }
-
-export default Resultados;
-
-/* import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PeliCard from "../components/PeliCard";
 import { useParams } from "react-router-dom";
 
@@ -12,7 +6,7 @@ import { useParams } from "react-router-dom";
 //renderiza una green card
 function Resultados(){
     //se ejecuta en el montaje
-    const[drinks, setDrinks]= useState([]);
+    const[pelis, setPelis]= useState([]);
     const{ query } = useParams();
 
     //corre una vez que cargó la pagina, dps del return
@@ -20,7 +14,7 @@ function Resultados(){
         //búsqueda por nombre
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`)
             .then((res)=> res.json())
-            .then((data)=>setDrinks(data.drinks));
+            .then((data)=>setPelis(data.resours));
 
     }, [query]);
 
@@ -29,8 +23,8 @@ function Resultados(){
  return( <section>
     <h2 className="center">{query.toUpperCase().replace('_',' ')}</h2>
         <ul className="flex flex-wrap gap-6"> 
-            {drinks.length > 0 ?
-             (drinks.slice(0, 20).map((drink)=> <DrinkCard key={drink.idDrink} drink={drink} />
+            {pelis.length > 0 ?
+             (pelis.slice(0, 20).map((peli)=> <PeliCard key={peli.id} peli={peli} />
             ))
             : (<p>Cargando...</p>)
             }
@@ -38,4 +32,4 @@ function Resultados(){
         </section>);
 }
 
-export default Resultados; */
+export default Resultados; 

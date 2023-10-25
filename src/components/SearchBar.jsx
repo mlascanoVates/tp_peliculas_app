@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Search(){
+function SearchBar(){
 
     return (
         <div className="form-control m-3 p-10">
@@ -15,4 +15,4 @@ function Search(){
     )
    }
    
-   export default Search;
+   export default SearchBar;
