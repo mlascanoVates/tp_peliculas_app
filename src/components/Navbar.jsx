@@ -48,9 +48,9 @@ function Navbar(){
           </div> 
         </div>
       </div> */
+//rgb(59 130 246 / 0.5)
 
-
-    <div className="flex  navbar bg-base-100 bg-gray-900 m-0 p-0 order-{order}  " >
+    <div className="flex  navbar bg-base-100 bg-gradient-to-r from-blue-950 m-0 p-0 order-{order}  " >
     <div className="flex-1 ">
         
     <div className="dropdown">

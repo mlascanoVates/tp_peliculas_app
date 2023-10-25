@@ -11,11 +11,11 @@ function SearchBar(){
             </div>
          
              
-            <form onSubmit={e=>e.preventDefault()}   className="input input-bordered w-24 md:w-[90%] border-solid" >
+            <form onSubmit={e=>e.preventDefault()}   className="input input-bordered bg-gradient-to-r from-indigo-900 w-24 md:w-[90%] border-solid" >
             <input onChange={(e)=>setInput(e.target.value)} 
             type="text" placeholder="Buscar" 
-            className='md:w-[90%] '/>
-            <button className=" w-24  md:w-[10%]  border-1 h-10">
+            className='md:w-[90%] bg-transparent '/>
+            <button className=" w-24  md:w-[10%]  bg-transparent  h-10">
               <Link to={`/results/${input}`}>🔎</Link>
             </button>
         
