@@ -5,7 +5,7 @@ import PeliDetalle from "../components/PeliDetalle";
 
 
 function Detalle(){
-    const [film, setFilm]= useState([]);
+    const [film, setFilm]= useState();
     //lo uso dentro del fetch
     const {idDetallePeli}  = useParams();
    
@@ -25,8 +25,8 @@ function Detalle(){
     },[]);
 
     return <div>
-       {film>0 ?  
-       <PeliDetalle film={film[0]}/>
+       {film!=null?  
+       <PeliDetalle film={film}/>
         : <span className="loading loading-spinner loading-xl"></span>}
     </div>;
    }
