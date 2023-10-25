@@ -1,26 +1,26 @@
-/* import { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 //en el mapeo que renderice el componente por cada elemento que se crea
-
+//https://developer.themoviedb.org/reference/movie-top-rated-list
 function PeliCard(props){
     
     const [favorite,setFavorite]= useState(false);
-
-/* 
-    const HandleFavorite= ()=>{
-        setFavorite(!favorite)
-    }
+    
  
     return  <div   div className=" card card-compact w-96 bg-base-100 shadow-xl">
-                <figure>
-                    <img src={props.drink.strDrinkThumb} alt="" />
-                </figure>
+              
                 <div className="card-body">
-                    <h2 className="card-title">{props.drink.strDrink}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <figure>
+                        {props.film.backdrop_path && (
+                        <img src={`https://image.tmdb.org/t/p/w500/${props.film.backdrop_path}`} alt="" />
+                        )}
+                    </figure> 
+                    <p>Calificacion: {props.film.vote_average}</p>
+                    <p>Review</p>
+                    <p>{props.film.overview}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary"><Link to={`detail/${props.drink.idDrink}`}>Detalles </Link></button>
+                        <button className="btn btn-primary">Detalles</button>
                         <button className="btn btn-primary" onClick={()=>setFavorite(!favorite)}> {favorite ? '❤': '🤍'}</button>
 
                     </div>
@@ -28,4 +28,4 @@ function PeliCard(props){
             </div>
 }
 
-export default PeliCard; */
+export default PeliCard; 

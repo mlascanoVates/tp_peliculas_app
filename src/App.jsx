@@ -9,6 +9,7 @@ import NotFound from './screens/NotFound'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Search from './components/Search'
+import Tendencias from './screens/Tendencias'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Routes>
          <Route path='/' element={<Home/>}/>
         <Route path='/categorias/:idCategoria' element={<Categorias/>}/>
+        <Route path='/peliculas/tendencias' element={<Tendencias/>}/>
         <Route path='/favoritos' element={<Favoritos/>}/>
         <Route path='/detalle/:idDetallePeli' element={<Detalle/>}/>
         <Route path='/resultados/:query' element={<Resultados/>}/>     parametro que extraigo 

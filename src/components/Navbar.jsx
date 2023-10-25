@@ -50,7 +50,7 @@ function Navbar(){
       </div> */
 
 
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 bg-gray-900 m-0 p-0">
     <div className="flex-1">
         
         <div className="dropdown">
@@ -77,14 +77,15 @@ function Navbar(){
     </div>
     <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-        <li className="font-extrabold"><a>Inicio</a></li>
+        <li className="font-extrabold"><Link to='/'>Inicio</Link></li>
         <li tabIndex={0}>
             <details>
             <summary>Películas</summary>
             <ul className="p-2">
-                <li><a>Estrenos</a></li>
-                <li><a>Mas vistas</a></li>
-                <li><a>Top 10</a></li>
+                <li><Link to='/peliculas/'>Estrenos</Link></li>
+                <li><Link to='/peliculas/'>Mas vistas</Link></li>
+                <li><Link to='/peliculas/'>Top 10</Link></li>
+                <li><Link to='/peliculas/tendencias'>Tendencias</Link></li>
             </ul>
             </details>
         </li>
@@ -98,11 +99,11 @@ function Navbar(){
             </ul>
             </details>
         </li>
-        <li><a>Favoritos</a></li>
+        <li><Link to='/favoritos'>Favoritos</Link></li>
         </ul>
     </div>
     <div className="navbar-end">
-        <a className="btn">Button</a>
+    <input type="text" placeholder="🔎 Buscar" className="input input-bordered w-24 md:w-[20%]  " />
     </div>
     </div>
     )

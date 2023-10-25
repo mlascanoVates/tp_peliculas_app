@@ -53,36 +53,22 @@ function Inicio(){
  */
 function Inicio() {
     const [films, setFilms] = useState([]);
-  /* 
+  
     useEffect(() => {
-      const apiKey = '396a995f0dac33c26922c030cdb715e2';
-  
-      // Definir la URL de la API con tu clave de API
-      const apiUrl = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=${apiKey}`;
-  
-      fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => setFilms(data.results))
+        const options = {
+            method: 'GET',
+            headers: {
+              accept: 'application/json',
+            },
+          };
+          
+          fetch('https://api.themoviedb.org/3/trending/movie/week?language=es&api_key=396a995f0dac33c26922c030cdb715e2', options)
+            .then(response => response.json())
+            .then(data => setFilms(data.results))
+    
       
     }, []);
-   */
-
-    
-    
-
-      const options = {
-        method: 'GET',
-        headers: {
-          accept: 'application/json',
-        },
-      };
-      
-      fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=396a995f0dac33c26922c030cdb715e2', options)
-        .then(response => response.json())
-        .then(data => setFilms(data.results))
-        .catch(err => console.error(err));
-
-
+   
 
     return (
       <section>
