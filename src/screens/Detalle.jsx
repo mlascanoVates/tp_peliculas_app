@@ -1,32 +1,34 @@
-function Detalle(){
-    return <div>Detalle</div>
-   }
-
-export default Detalle;
-
-/* import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CardDetail from "../components/CardDetail";
+import PeliDetalle from "../components/PeliDetalle";
 
 
-function Detail(){
-    const [trago, setTrago]= useState([]);
+
+function Detalle(){
+    const [film, setFilm]= useState([]);
     //lo uso dentro del fetch
-    const {idDetail}  = useParams();
+    const {idDetallePeli}  = useParams();
    
-
     useEffect(()=>{
-        fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idDetail}`)
+        const options = {
+            method: 'GET',
+            headers: {
+              accept: 'application/json',
+              }
+          };
+
+          
+        fetch(`https://api.themoviedb.org/3/movie/${idDetallePeli}?language=es&api_key=396a995f0dac33c26922c030cdb715e2`)
         .then((res)=>res.json())
-        .then((data)=>setTrago(data.drinks));
+        .then((data)=>setFilm(data));
 
     },[]);
 
     return <div>
-       {trago.length>0 ?  
-       <CardDetail drink={trago[0]}/>
+       {film>0 ?  
+       <PeliDetalle film={film[0]}/>
         : <span className="loading loading-spinner loading-xl"></span>}
     </div>;
    }
 
-export default Detail; */
+export default Detalle;

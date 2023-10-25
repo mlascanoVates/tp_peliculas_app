@@ -51,7 +51,7 @@ function Inicio(){
         </section>);
 }
  */
-function Tendencias() {
+function MejorCalificada() {
     const [films, setFilms] = useState([]);
   
     useEffect(() => {
@@ -61,8 +61,7 @@ function Tendencias() {
               accept: 'application/json',
             },
           };
-          
-          fetch('https://api.themoviedb.org/3/trending/movie/week?language=es&api_key=396a995f0dac33c26922c030cdb715e2', options)
+           fetch('https://api.themoviedb.org/3/movie/top_rated?language=es&api_key=396a995f0dac33c26922c030cdb715e2', options)
             .then(response => response.json())
             .then(data => setFilms(data.results))
     
@@ -71,10 +70,11 @@ function Tendencias() {
    
 
     return (
-      <section >
+      <section>
         <ul className="flex flex-wrap gap-6">
           {films.length > 0 ? (
             films.slice(0, 20).map(film => (
+           
               <li><PeliCard key={film.id}
               film={film}/></li>
             ))
@@ -88,4 +88,4 @@ function Tendencias() {
     );
   }
   
-export default Tendencias; 
+export default  MejorCalificada;

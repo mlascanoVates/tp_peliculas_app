@@ -50,10 +50,10 @@ function Navbar(){
       </div> */
 
 
-    <div className="navbar bg-base-100 bg-gray-900 m-0 p-0">
-    <div className="flex-1">
+    <div className="flex  navbar bg-base-100 bg-gray-900 m-0 p-0 order-{order}  " >
+    <div className="flex-1 ">
         
-        <div className="dropdown">
+    <div className="dropdown">
         <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
         </label>
@@ -63,56 +63,58 @@ function Navbar(){
             <a>Películas</a>
             <ul className="p-2">
                 <li><Link to='/peliculas/'>Estrenos</Link></li>
-                <li><Link to='/peliculas/'>Mas vistas</Link></li>
-                <li><Link to='/peliculas/'>Top 10</Link></li>
+                <li><Link to='/peliculas/populares'>Populares</Link></li>
                 <li><Link to='/peliculas/tendencias'>Tendencias</Link></li>
+                <li><Link to='/peliculas/mejor_calificadas'>Mejor Calificadas</Link></li>
+                
             </ul>
             <a>Géneros</a>
             <ul className="p-2">
-                <li>Comedia</li>
+                <li>Comedria</li>
                 <li>Drama</li>
                 <li>Suspenso</li>
             </ul>
             </li>
             <li><Link to='/favoritos'>Favoritos</Link></li>
         </ul>
-        </div>
-        <div className="w-40">
-            <Link to='/'><img src="../logo_pelis.png"/></Link>
-        </div>
+    </div>
+
+    <div className="w-40 w-{30%}">
+        <Link to='/'><img src="../logo_pelis.png"/></Link>
+    </div>
        
         
     </div>
-    <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-        <li className="font-extrabold"><Link to='/'>Inicio</Link></li>
-        <li tabIndex={0}>
-            <details>
-            <summary>Películas</summary>
-            <ul className="p-2">
+        <div className="navbar-center hidden lg:flex ">
+            <ul className="menu menu-horizontal px-1">
+            <li className="font-extrabold"><Link to='/'>Inicio</Link></li>
+            <li tabIndex={0}>
+                <details>
+                <summary>Películas</summary>
+                <ul className="p-2">
                 <li><Link to='/peliculas/'>Estrenos</Link></li>
-                <li><Link to='/peliculas/'>Mas vistas</Link></li>
-                <li><Link to='/peliculas/'>Top 10</Link></li>
+                <li><Link to='/peliculas/populares'>Populares</Link></li>
                 <li><Link to='/peliculas/tendencias'>Tendencias</Link></li>
+                <li><Link to='/peliculas/mejor_calificadas'>Mejor Calificadas</Link></li>
+                </ul>
+                </details>
+            </li>
+            <li tabIndex={0}>
+                <details>
+                <summary>Géneros</summary>
+                <ul className="p-2">
+                    <li>Comedia</li>
+                    <li>Drama</li>
+                    <li>Suspenso</li>
+                </ul>
+                </details>
+            </li>
+            <li><Link to='/favoritos'>Favoritos</Link></li>
             </ul>
-            </details>
-        </li>
-        <li tabIndex={0}>
-            <details>
-            <summary>Géneros</summary>
-            <ul className="p-2">
-                <li>Comedia</li>
-                <li>Drama</li>
-                <li>Suspenso</li>
-            </ul>
-            </details>
-        </li>
-        <li><Link to='/favoritos'>Favoritos</Link></li>
-        </ul>
-    </div>
-    <div className="navbar-end">
-    <input type="text" placeholder="🔎 Buscar" className="input input-bordered w-24 md:w-[20%]  " />
-    </div>
+        </div>
+        <div className="navbar-end w-[30%]">
+        <input type="text" placeholder="🔎 Buscar" className="input input-bordered w-24 md:w-[50%]  " />
+        </div>
     </div>
     )
    }
