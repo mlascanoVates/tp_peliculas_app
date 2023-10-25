@@ -12,23 +12,32 @@ function PeliDetalle(props){
         setFavorite(!favorite)
     }
  */
-    return  <div  className=" card card-compact w-96 bg-base-100 shadow-xl">
-                <figure>
-                    <img src={props.film.backdrop_path} alt="" />
-                </figure>
-                <div className="card-body">
-                    <h2 className="card-title">{props.film.title}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div>
-                  
-                        <p> {props.film.overview}</p>
-                    </div>
+    return  <div className="flex justify-center mb-20 ">
+           
+    <div  className=" card w-96 bg-base-200 shadow-xl">
             
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary" onClick={()=>setFavorite(!favorite)}> {favorite ? '5': '33'}</button>
-                    </div>
+            <figure>
+                {props.film.backdrop_path && (
+                <img src={`https://image.tmdb.org/t/p/w500/${props.film.backdrop_path}`} alt="" />
+                )}
+        
+            </figure>
+            <div className="card-body ">
+                <h2 className="card-title justify-center ">{props.film.title}</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div>
+              
+                    <p> {props.film.overview}</p>
+                </div>
+        
+                <div className="card-actions justify-center">
+                    <button className="btn btn-primary" onClick={()=>setFavorite(!favorite)}>  {favorite ? '❤': '🤍'}</button>
                 </div>
             </div>
+        </div>
+
+    </div> 
+ 
 }
 
 export default PeliDetalle;
