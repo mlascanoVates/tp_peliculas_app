@@ -74,7 +74,7 @@ function MejorCalificada() {
         <ul className="flex flex-wrap gap-6">
           {films.length > 0 ? (
             films.slice(0, 20).map(film => (
-           
+          
               <li><PeliCard key={film.id}
               film={film}/></li>
             ))

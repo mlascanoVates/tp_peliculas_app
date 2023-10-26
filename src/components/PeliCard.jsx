@@ -16,7 +16,7 @@ function PeliCard(props){
                 <div className="card-body mt-40">
                     <h2 className="card-title justify-center">{props.film.title}</h2>
                     <p>Calificacion: {props.film.vote_average}</p>
-                                    <p>id: {props.film.id}</p>
+                               
                     <div className="card-actions justify-center mt-5 ">
                                         <button className="btn btn-primary"><Link to={`/detalle/${props.film.id}`}>Detalles</Link></button>
                                         <button className="btn btn-primary" onClick={()=>setFavorite(!favorite)}> {favorite ? '❤': '🤍'}</button>

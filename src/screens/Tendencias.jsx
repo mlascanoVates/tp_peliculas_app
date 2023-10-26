@@ -69,22 +69,26 @@ function Tendencias() {
       
     }, []);
    
-
     return (
-      <section >
-        <ul className="flex flex-wrap gap-6">
+    <dii >
+      <div className="flex flex-wrap gap-6">
           {films.length > 0 ? (
             films.slice(0, 20).map(film => (
-              <li><PeliCard key={film.id}
-              film={film}/></li>
-            ))
-          ) : (
+                <div className="carousel-item">
+                    <PeliCard key={film.id}
+                  film={film}/>
+                     
+                </div>      
+          ))) : (
             <h2 className="center">
               <span className="loading loading-spinner loading-xl"></span>
             </h2>
           )}
-        </ul>
-      </section>
+      
+        </div>
+        </dii>
+    
+
     );
   }
   

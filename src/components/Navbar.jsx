@@ -62,7 +62,6 @@ function Navbar(){
             <li>
             <a>Películas</a>
             <ul className="p-2">
-                <li><Link to='/peliculas/'>Estrenos</Link></li>
                 <li><Link to='/peliculas/populares'>Populares</Link></li>
                 <li><Link to='/peliculas/tendencias'>Tendencias</Link></li>
                 <li><Link to='/peliculas/mejor_calificadas'>Mejor Calificadas</Link></li>
@@ -92,7 +91,6 @@ function Navbar(){
                 <details>
                 <summary>Películas</summary>
                 <ul className="p-2">
-                <li><Link to='/peliculas/'>Estrenos</Link></li>
                 <li><Link to='/peliculas/populares'>Populares</Link></li>
                 <li><Link to='/peliculas/tendencias'>Tendencias</Link></li>
                 <li><Link to='/peliculas/mejor_calificadas'>Mejor Calificadas</Link></li>
