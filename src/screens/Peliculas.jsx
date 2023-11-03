@@ -23,17 +23,24 @@ function Peliculas(){
       storedFavorites && setFavorites(storedFavorites);
     },[])
 
-
+/* 
     const options = {
         method: 'GET',
         headers: {
           accept: 'application/json',
         },
-      };
+      }; */
 
     //MODIFICar ruta
     useEffect(()=>{
-        fetch(`https://api.themoviedb.org/3/movie/${idPeliculas}?api_key=396a995f0dac33c26922c030cdb715e2`, options)
+        const options = {
+          method: 'GET',
+          headers: {
+            accept: 'application/json',
+          },
+        };
+
+        fetch(`https://api.themoviedb.org/3/movie/${idPeliculas}?language=es&api_key=396a995f0dac33c26922c030cdb715e2`, options)
             .then((res)=> res.json())
             .then((data)=>setFilms(data.results));
 

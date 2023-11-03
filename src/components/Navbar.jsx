@@ -65,7 +65,7 @@ function Navbar(){
                 <li><Link to='/peliculas/popular'>Populares</Link></li>
                 <li><Link to='/tendencias'>Tendencias</Link></li>
                 <li><Link to='/peliculas/top_rated'>Mejor Calificadas</Link></li>
-   {/*              <li><Link to='/peliculas/recommendations'>Recomendadas</Link></li> */}
+                <li><Link to='/peliculas/upcoming'>Próximos Lanzamientos</Link></li> 
                 
             </ul>
             <a>Géneros</a>
@@ -95,7 +95,7 @@ function Navbar(){
                 <li><Link to='/peliculas/popular'>Populares</Link></li>
                 <li><Link to='/tendencias'>Tendencias</Link></li>
                 <li><Link to='/peliculas/top_rated'>Mejor Calificadas</Link></li>
-{/*                 <li><Link to='/peliculas/recommendations'>Recomendadas</Link></li> */}
+                <li><Link to='/peliculas/upcoming'>Lanzamientos</Link></li> 
                 
                 </ul>
                 </details>
