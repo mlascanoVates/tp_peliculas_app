@@ -7,9 +7,9 @@ import { useParams } from "react-router-dom";
 function Resultados(){
     //se ejecuta en el montaje
     const[pelis, setPelis]= useState([]);
-    const{ query } = useParams();
-
-    //corre una vez que cargó la pagina, dps del return
+ /*    const{ query } = useParams();
+ */
+  /*   //corre una vez que cargó la pagina, dps del return
     useEffect(()=>{
         //búsqueda por nombre
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`)
@@ -17,7 +17,7 @@ function Resultados(){
             .then((data)=>setPelis(data.resours));
 
     }, [query]);
-
+ */
 
 //pasamos componente por prop
  return( <section>

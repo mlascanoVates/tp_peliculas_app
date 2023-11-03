@@ -5,13 +5,7 @@ import { Link } from "react-router-dom";
 
 function PeliDetalle(props){
     
-    const [favorite,setFavorite]= useState(false);
 
-/* 
-    const HandleFavorite= ()=>{
-        setFavorite(!favorite)
-    }
- */
     return  <div className="flex justify-center mb-20 ">
            
     <div  className=" card w-96 bg-base-200 shadow-xl">
@@ -24,14 +18,15 @@ function PeliDetalle(props){
             </figure>
             <div className="card-body ">
                 <h2 className="card-title justify-center ">{props.film.title}</h2>
+                <p>Calificacion: {props.film.vote_average}</p>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div>
-              
+                
                     <p> {props.film.overview}</p>
                 </div>
         
                 <div className="card-actions justify-center">
-                    <button className="btn btn-primary" onClick={()=>setFavorite(!favorite)}>  {favorite ? '❤': '🤍'}</button>
+                
                 </div>
             </div>
         </div>

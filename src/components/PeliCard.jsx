@@ -15,10 +15,7 @@ function PeliCard(props){
         props.setFavorites(updatedFavorites);
         localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
 
-        // FUNCIÓN QUE SE UTILIZA SÓLO EN LA SCREEN FAVORITES PARA REMOVER EL TRAGO
-      /*   if (props.favorites.includes(props.film.id)) {
-            props.removeFavorite(props.film.id);
-        } */
+     
 
         setFavorite(!favorite);
     };

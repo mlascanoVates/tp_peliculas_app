@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import PeliCard from "../components/PeliCard";
 import { useParams } from "react-router-dom";
-
+import SearchBar from "../components/SearchBar";
 import { Link } from "react-router-dom";
 
 function Inicio(){
 
     const [films1, setFilms] = useState([]);
     const [favorites, setFavorites] = useState([]);
-        
+    const [input, setInput]= useState('');
   
     //accedemos al JSON y parseamos la info
     //si tenemos guardado los favoritos nos debería dar un array
@@ -27,7 +27,7 @@ function Inicio(){
             
             fetch('https://api.themoviedb.org/3/trending/movie/week?language=es&api_key=396a995f0dac33c26922c030cdb715e2', options)
               .then(response => response.json())
-              .then(data => setFilms(data.results))
+              .then(data => {setFilms(data.results);})
     }, []);
 
     const [films2, setFilms2] = useState([]);
@@ -41,7 +41,7 @@ function Inicio(){
           };
            fetch('https://api.themoviedb.org/3/movie/top_rated?language=es&api_key=396a995f0dac33c26922c030cdb715e2', options)
             .then(response => response.json())
-            .then(data => setFilms2(data.results))
+            .then(data => {setFilms2(data.results); })
     
       
     }, []);
@@ -59,14 +59,19 @@ function Inicio(){
 
       fetch('https://api.themoviedb.org/3/movie/popular?language=es&api_key=396a995f0dac33c26922c030cdb715e2', options)
         .then(response => response.json())
-        .then(data => setFilms3(data.results))
+        .then(data => {setFilms3(data.results); })
       
     }, []);
 
-
- 
+/* const filtrados = conjunto.filter((film) => {
+  return film.title === input; // Reemplaza "Título Deseado" con el título que desees buscar
+});
+  
+  */
  return( <section>
+   
     <h2 className="center"></h2>
+   
         <div className="  text-left tracking-wide" >
     <h2 className="center  text-white-900 font-bold p-1 text-4xl pt-10 pl-10 pb-5"><Link to='/tendencias'>{`Tendencias >`} </Link></h2>
         </div>
