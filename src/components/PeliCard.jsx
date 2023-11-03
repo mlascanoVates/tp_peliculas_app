@@ -36,7 +36,7 @@ function PeliCard(props){
                                
                     <div className="card-actions justify-center mt-5 ">
                                         <button className="btn btn-primary"><Link to={`/detalle/${props.film.id}`}>Detalles</Link></button>
-                                        <button className="btn btn-primary" onClick={handleFavorite}> {props.favorites.includes(props.film.id) ? '❤' :<img width="20" height="20" src="https://img.icons8.com/emoji/48/yellow-heart.png" alt="yellow-heart"/>   }</button>
+                                        <button className="btn btn-primary" onClick={handleFavorite}> {props.favorites.includes(props.film.id) ? <img width="20" height="20" src="https://img.icons8.com/emoji/48/yellow-heart.png" alt="yellow-heart"/> : '🤍'   }</button>
                     </div>
                 </div>
             </div>

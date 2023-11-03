@@ -31,15 +31,15 @@ function Favoritos() {
                
                setFavorites(storedFavorites); 
         }
-    }, []);
+    }, [favorites]);
 
-   // Función para quitar una peli de la lista de favoritos
+/*    // Función para quitar una peli de la lista de favoritos
    const removeFavorite = (peliId) => {
     const updatedFavorites = favorites.filter((id) => id !== peliId);
     setFavorites(updatedFavorites);
     localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
     setFavFilm(favFilm.filter((film) => film.id !== peliId));
-};
+}; */
 
 
     return (
@@ -56,7 +56,7 @@ function Favoritos() {
                             film={film}
                             favorites={favorites}
                             setFavorites={setFavorites}
-                            removeFavorite={removeFavorite}
+                   /*          removeFavorite={removeFavorite} */
                         />
                         </li>
                        
