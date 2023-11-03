@@ -69,11 +69,7 @@ function Navbar(){
                 
             </ul>
             <a>Géneros</a>
-            <ul className="p-2">
-                <li>Comedria</li>
-                <li>Drama</li>
-                <li>Suspenso</li>
-            </ul>
+            
             </li>
             <li><Link to='/favoritos'>Favoritos</Link></li>
         </ul>
@@ -103,11 +99,7 @@ function Navbar(){
             <li tabIndex={0}>
                 <details>
                 <summary>Géneros</summary>
-                <ul className="p-2">
-                    <li>Comedia</li>
-                    <li>Drama</li>
-                    <li>Suspenso</li>
-                </ul>
+                
                 </details>
             </li>
             <li><Link to='/favoritos'>Favoritos</Link></li>

@@ -68,7 +68,7 @@ function Inicio(){
  return( <section>
     <h2 className="center"></h2>
         <div className="  text-left tracking-wide" >
-    <h2 className="center  text-white-900 font-bold p-1 text-4xl pt-10 pl-10 pb-5"><Link to='/peliculas/populares'>{`Tendencias >`} </Link></h2>
+    <h2 className="center  text-white-900 font-bold p-1 text-4xl pt-10 pl-10 pb-5"><Link to='/tendencias'>{`Tendencias >`} </Link></h2>
         </div>
         <dii className='w-screen	'>
           <div className="carousel carousel-center   w-screen	 p-4 bg-neutral rounded-box">
@@ -88,7 +88,7 @@ function Inicio(){
           </div>
         </dii>
         <div className="  text-left tracking-wide" >
-          <h2 className="center  text-white-900 font-bold p-1 text-4xl p-5 pt-10 pl-10"><Link to='/peliculas/mejor_calificadas'>{`Mejor Calificadas >`} </Link></h2>
+          <h2 className="center  text-white-900 font-bold p-1 text-4xl p-5 pt-10 pl-10"><Link to='/peliculas/top_rated'>{`Mejor Calificadas >`} </Link></h2>
         </div>
         <dii className='w-screen	'>
           <div className="carousel carousel-center   w-screen	 p-4 bg-neutral rounded-box">
@@ -108,7 +108,7 @@ function Inicio(){
           </div>
         </dii>
         <div className="  text-left tracking-wide" >
-          <h2 className="center  text-white-900 font-bold p-1 text-4xl p-5 pt-10 pl-10"><Link to='/peliculas/populares'>{`Populares >`} </Link></h2>
+          <h2 className="center  text-white-900 font-bold p-1 text-4xl p-5 pt-10 pl-10"><Link to='/peliculas/popular'>{`Populares >`} </Link></h2>
         </div>
         <div className='w-screen	'>
           <div className="carousel carousel-center   w-screen	 p-4 bg-neutral rounded-box">
