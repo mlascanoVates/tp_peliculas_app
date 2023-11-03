@@ -68,7 +68,7 @@ function Inicio(){
  return( <section>
     <h2 className="center"></h2>
         <div className="  text-left tracking-wide" >
-          <h2 className="center  text-white-900 font-bold p-1 text-4xl pt-10 pl-10 pb-5"><Link to='/peliculas/populares'>{`Tendencias >`} </Link></h2>
+    <h2 className="center  text-white-900 font-bold p-1 text-4xl pt-10 pl-10 pb-5"><Link to='/peliculas/populares'>{`Tendencias >`} </Link></h2>
         </div>
         <dii className='w-screen	'>
           <div className="carousel carousel-center   w-screen	 p-4 bg-neutral rounded-box">

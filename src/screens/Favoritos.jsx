@@ -44,7 +44,7 @@ function Favoritos() {
 
     return (
         <div>
-            <h2 className="text-center my-6">FAVORITES</h2>
+            <h2 className="center  text-white-900 font-bold p-1 text-4xl pt-10 pl-10 pb-5">Favoritos</h2>
             <ul className="flex justify-center items-center flex-wrap gap-6">
                 {favFilm.length > 0 ?
                  (
