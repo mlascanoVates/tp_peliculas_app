@@ -62,9 +62,10 @@ function Navbar(){
             <li>
             <a>Películas</a>
             <ul className="p-2">
-                <li><Link to='/peliculas/populares'>Populares</Link></li>
-                <li><Link to='/peliculas/tendencias'>Tendencias</Link></li>
-                <li><Link to='/peliculas/mejor_calificadas'>Mejor Calificadas</Link></li>
+                <li><Link to='/peliculas/popular'>Populares</Link></li>
+                <li><Link to='/tendencias'>Tendencias</Link></li>
+                <li><Link to='/peliculas/top_rated'>Mejor Calificadas</Link></li>
+   {/*              <li><Link to='/peliculas/recommendations'>Recomendadas</Link></li> */}
                 
             </ul>
             <a>Géneros</a>
@@ -91,9 +92,11 @@ function Navbar(){
                 <details>
                 <summary>Películas</summary>
                 <ul className="p-2">
-                <li><Link to='/peliculas/populares'>Populares</Link></li>
-                <li><Link to='/peliculas/tendencias'>Tendencias</Link></li>
-                <li><Link to='/peliculas/mejor_calificadas'>Mejor Calificadas</Link></li>
+                <li><Link to='/peliculas/popular'>Populares</Link></li>
+                <li><Link to='/tendencias'>Tendencias</Link></li>
+                <li><Link to='/peliculas/top_rated'>Mejor Calificadas</Link></li>
+{/*                 <li><Link to='/peliculas/recommendations'>Recomendadas</Link></li> */}
+                
                 </ul>
                 </details>
             </li>

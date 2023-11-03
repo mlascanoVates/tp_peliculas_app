@@ -24,6 +24,17 @@ function Detalle(){
 
     },[]);
 
+    //forma de recuperar favoritos
+    /*  const [favorites, setFavorites] = useState([]);
+
+        //localstorage guarda la info como JSON
+        useEffect(()=>{
+        const  storedFavorites=Json.parse(localStorage.getItem('favorites'));
+        storedFavorites && setFavorites(storedFavorites)
+        },[]);
+    */
+
+
     return <div>
        {film!=null?  
        <PeliDetalle film={film}/>

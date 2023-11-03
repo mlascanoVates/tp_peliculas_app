@@ -1,15 +1,22 @@
 import { useEffect, useState } from "react";
 import PeliCard from "../components/PeliCard";
 import { useParams } from "react-router-dom";
-import MejorCalificada from "./MejorCalificada";
-import Tendencias from "./Tendencias";
-import Populares from "./Populares";
+
 import { Link } from "react-router-dom";
 
 function Inicio(){
 
     const [films1, setFilms] = useState([]);
+    const [favorites, setFavorites] = useState([]);
         
+  
+    //accedemos al JSON y parseamos la info
+    //si tenemos guardado los favoritos nos debería dar un array
+    useEffect(()=>{
+      const storedFavorites = JSON.parse(localStorage.getItem('favorites'));
+      storedFavorites && setFavorites(storedFavorites);
+    },[])
+
     useEffect(() => {
           const options = {
               method: 'GET',
@@ -40,6 +47,7 @@ function Inicio(){
     }, []);
 
     const [films3, setFilms3] = useState([]);
+
   
     useEffect(() => {
       const options = {
@@ -49,14 +57,14 @@ function Inicio(){
           }
       };
 
-      fetch('https://api.themoviedb.org/3/movie/popular?language=es&api_key=396a995f0dac33c26922c030cdb715e2')
+      fetch('https://api.themoviedb.org/3/movie/popular?language=es&api_key=396a995f0dac33c26922c030cdb715e2', options)
         .then(response => response.json())
         .then(data => setFilms3(data.results))
-       
-          
       
     }, []);
 
+
+ 
  return( <section>
     <h2 className="center"></h2>
         <div className="  text-left tracking-wide" >
@@ -68,7 +76,7 @@ function Inicio(){
               films1.slice(0, 10).map(film => (
                   <div className="carousel-item">
                     <PeliCard key={film.id}
-                    film={film}/>
+                    film={film} favorites={favorites} setFavorites={setFavorites}/>
                       
                   </div>    )))    
                 : (
@@ -88,7 +96,7 @@ function Inicio(){
               films2.slice(0, 10).map(film => (
                   <div className="carousel-item">
                     <PeliCard key={film.id}
-                    film={film}/>
+                    film={film} favorites={favorites} setFavorites={setFavorites}/>
                       
                   </div>    )))    
                 : (
@@ -108,7 +116,7 @@ function Inicio(){
               films3.slice(0, 10).map(film => (
                   <div className="carousel-item">
                     <PeliCard key={film.id}
-                    film={film}/>
+                    film={film} favorites={favorites} setFavorites={setFavorites}/>
                       
                   </div>    )))    
                 : (
